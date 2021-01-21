@@ -1,0 +1,199 @@
+*{
+    background-color: #030a21;
+    cursor: default;
+}
+
+/*button*/
+
+ #mybutton{     
+    width: 10.42vw;
+    height: 21.64vh;
+    position: absolute;
+    margin-left: 45vw;
+    margin-top: 20vh;   
+ }
+
+.circleone {
+    width: 10.42vw;
+    height: 14.43vh;
+    border-radius: 50%;
+    border: none;
+    position: relative;
+    background-image: radial-gradient(#cc0000, #FF0000 ,#990000);
+    z-index: 3;
+    animation: grow 1s ease forwards; 
+}
+
+
+.circleone:hover{
+    cursor: pointer;
+}
+
+.circletwo {
+    width: 10.42vw;
+    height: 14.43vh;
+    border-radius: 50%;
+    border: none;
+    position: relative;
+    background-color: #cc0000;
+    margin-top: -7vh; 
+    z-index: 1;  
+}
+
+.rct {
+    width: 10.42vw;
+    height: 5vh;
+    background-color: #cc0000;
+    position: relative;
+    border: none;
+    margin-top: -7vh;
+    z-index: 2;    
+}
+
+ .clicked{
+    animation: growdown 1s ease forwards;    
+}
+ 
+@keyframes grow{
+  0%{ transform: translateY(0.865vh);}
+  100%{ transform: translateY(0vh);}           
+} 
+
+@keyframes growdown{
+   0%{ transform: translateY(0vh);}
+  100%{ transform: translateY(0.865vh);}         
+}
+
+/*rocket*/
+
+.rocket{
+        width: 30px;
+        height:80px;
+        transform:rotate(-90deg);  
+        position: relative; 
+        margin-top: 300px;
+        opacity: 0;
+}
+
+.rocket_new{
+        opacity: 1;
+           
+        -webkit-animation-name: flightV, flightH;
+        -webkit-animation-iteration-count: 1;
+        -webkit-animation-duration: 30s;
+        -webkit-animation-timing-function: linear;
+
+        animation-name: flightV, flightH;
+        animation-iteration-count: 1; 
+        animation-duration: 30s;
+        animation-timing-function: linear;    
+    }
+
+/*looks*/
+
+.body, .window,.fin-wrap, .left-fin,.right-fin{
+    position: absolute;
+}
+
+.body{
+    width:20px;
+    height:45px;
+    background-color: #5494ed;
+    top:20px;
+    left:5px;
+    border-radius:70% 70% 60% 60%/70% 70%;      
+} 
+
+.window{
+    width:11px;
+    height:11px;
+    background-color: #82c2bd; 
+    top:15px;
+    left:4px;
+    border-radius:50%;  
+}
+
+.fin-wrap{
+    width:24px;
+    height:30px;
+    top:45px;
+    left:3px;    
+}
+
+.left-fin, .right-fin{
+    width:8px;
+    height:25px;
+    background-color: #5494ed;
+}
+
+.left-fin{
+    left:0;
+    border-radius:89% 1% 117% 8%/107% 50% 80% 8%;
+}
+
+.right-fin{
+    right:0;
+    border-radius:1% 89% 8% 117%/50% 107% 8% 80%;
+}
+
+/* animation*/
+
+@-webkit-keyframes flightH{
+    from{left: 70vw;}
+    to{left: 1vw;}
+}
+  
+
+@-webkit-keyframes flightH{
+    from{left: 70vw;}
+    to{left: 1vw;}
+}
+
+
+
+@-webkit-keyframes flightV{
+    from, to{
+        bottom: 100px;
+        opacity: 0;
+        animation-timing-function: ease-out;
+    }
+    20%{ bottom: 100px;
+        opacity: 1;
+         animation-timing-function: ease-in
+    }
+
+    40%{ bottom: 300px;
+         opacity: 1;
+         animation-timing-function: ease-in
+
+    }
+
+    70%{
+        bottom: 200px;
+        opacity: 1;
+        animation-timing-function: ease-in;
+    }
+
+    80%{
+
+        bottom: 180px;
+        opacity: 1;
+        animation-timing-function: ease-out
+    }
+
+    95%{
+        bottom: 200px;
+        opacity: 0;
+        animation-timing-function: ease-out
+    }
+}
+
+ 
+
+
+ 
+
+
+ 
+     
+
